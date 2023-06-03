@@ -1,0 +1,159 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: 'Source San Pro',sans-serif;
+  font-size: 1rem;
+  color: #404040;
+  text-align: center;
+}
+
+h1{
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+}
+
+h1 + p{
+  color: #f18119;
+  font-weight: 900;
+  font-size: 1.3125rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2{
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+h2+p{
+  color: #f18119;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+.top-text{
+  font-size: 0.625rem;
+  font-weight: 900;
+  color: #f18119;
+  text-transform: uppercase;
+  order: -1;
+ 
+  border: 5px solid #F18119;
+}
+
+.fine-print{
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+}
+
+strong{
+  font-weight: 900;
+}
+
+/* Intro section */
+
+.intro{
+  background: black;
+  background-image: url(images/dark-ribs.jpg);
+  padding: 0 0.25em 2em;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  justify-content: space-between;
+  min-height: 50vh;
+}
+
+/* main content */
+
+.main-content{
+  padding: 2em 1em;
+}
+
+.intro > *,
+.main-content > * {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* form */
+.email-collector{
+  width: 80%;
+  max-width: 300px;
+}
+
+input,
+.btn{
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: .25em;
+  font-family: inherit;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: .75em;
+  transition: transform 250ms;
+}
+
+input:focus{
+transform: scale(1.1)
+}
+
+.btn{
+  display: inline-block;
+  padding: 1em 1.5em;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: 0;
+  cursor: pointer;
+  transition: transform color 250ms;
+}
+
+.btn-primary{
+  background-image: linear-gradient(to left,#ff713b, #ffa51d);
+  color: white;
+}
+
+.btn-primary:focus,
+.btn-primary:hover{
+  color: black;
+  transform: scale(1.1);
+}
+
+/* media queries */
+@media(min-width: 500px){
+  body{
+    font-size: 1.125rem;
+    display: flex;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+    
+  h2,
+  h1 + p {
+    font-size: 1.75rem;
+  }
+
+  .intro,
+  .main-content{
+    width: 50%;
+    min-height: 100vh;
+  }
+
+  .main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
